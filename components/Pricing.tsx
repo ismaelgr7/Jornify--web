@@ -4,7 +4,11 @@ import Section from './Section';
 import Button from './Button';
 import { Check } from 'lucide-react';
 
-const Pricing: React.FC = () => {
+interface PricingProps {
+  onContactClick?: () => void;
+}
+
+const Pricing: React.FC<PricingProps> = ({ onContactClick }) => {
   return (
     <Section id="precios" className="bg-slate-50 py-24">
       <div className="text-center max-w-2xl mx-auto mb-12">
@@ -24,12 +28,12 @@ const Pricing: React.FC = () => {
             <div className="text-slate-500 mb-8">
               por {PRICING_COPY.unit} {PRICING_COPY.period}
             </div>
-            <Button variant="primary" fullWidth className="py-4 text-base">
+            <Button variant="primary" fullWidth className="py-4 text-base" onClick={onContactClick}>
               Empezar prueba gratuita
             </Button>
             <p className="mt-4 text-xs text-slate-400">Cancelación gratuita en cualquier momento.</p>
           </div>
-          
+
           <div className="bg-slate-50 px-8 py-8 sm:px-10">
             <ul className="space-y-4">
               {PRICING_COPY.features.map((feature, idx) => (

@@ -75,7 +75,7 @@ function App() {
             <Features />
             <HowItWorks />
             <Consultancies onContactClick={() => setIsContactModalOpen(true)} />
-            <Pricing />
+            <Pricing onContactClick={() => setIsContactModalOpen(true)} />
             <FAQ />
           </>
         )}
