@@ -118,8 +118,8 @@ const SEOSoftwareControlHorario: React.FC = () => {
             <li className="flex gap-4">
               <Database className="text-blue-600 flex-shrink-0" size={24} />
               <div>
-                <strong className="block text-slate-900">Gestión de ausencias e incidencias:</strong>
-                <span>Posibilidad de registrar vacaciones, bajas médicas o permisos, integrándolos automáticamente en el cómputo de horas mensuales.</span>
+                <strong className="block text-slate-900">Informes PDF personalizados:</strong>
+                <span>Descargue registros detallados de un empleado o de toda la plantilla en cualquier rango de fechas para una gestión impecable.</span>
               </div>
             </li>
           </ul>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { FEATURES } from '../constants';
 import Section from './Section';
-import { ShieldCheck, Smartphone, Clock } from 'lucide-react';
+import { ShieldCheck, Smartphone, Monitor } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   ShieldCheck: <ShieldCheck size={32} className="text-blue-600" />,
   Smartphone: <Smartphone size={32} className="text-blue-600" />,
-  Clock: <Clock size={32} className="text-blue-600" />
+  Monitor: <Monitor size={32} className="text-blue-600" />
 };
 
 const Features: React.FC = () => {

@@ -31,9 +31,9 @@ export const FEATURES: Feature[] = [
     iconName: "Smartphone"
   },
   {
-    title: "Simplicidad Administrativa",
-    description: "Gestión de vacaciones, bajas y horas extra en una interfaz limpia. Diseñado para que la gestión de RRHH no consuma tiempo.",
-    iconName: "Clock"
+    title: "Gestión en Tiempo Real",
+    description: "Visualiza al instante quién está trabajando y cuántas horas lleva cada empleado. Control total desde el panel de administración.",
+    iconName: "Monitor"
   }
 ];
 
@@ -68,8 +68,8 @@ export const PRICING_COPY: PricingDetail = {
   period: "/ año (IVA incluido)",
   features: [
     "Registro de entradas y salidas",
-    "Gestión de vacaciones y ausencias",
-    "Informes para inspección exportables",
+    "Generación de informes PDF por empleado",
+    "Control de horas en tiempo real",
     "Soporte técnico por email",
     "Sin límite de registros",
     "Actualizaciones legales incluidas"

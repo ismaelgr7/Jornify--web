@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Usuario - Jornify</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #0ea5e9;
+            --accent: #f43f5e;
+            --bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+        }
+
+        /* --- Estilos para PDF / Impresión --- */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            .container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 20px !important;
+            }
+
+            .card {
+                box-shadow: none !important;
+                border: 1px solid #efefef !important;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 40px 80px;
+            background: #0f172a;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.5) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.4) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(79, 70, 229, 0.3) 0px, transparent 50%);
+            color: white;
+            border-radius: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #94a3b8;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .badge-admin {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+
+        .badge-user {
+            background: #dcfce7;
+            color: #22c55e;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .step-content {
+            flex-grow: 1;
+        }
+
+        .step-content h3 {
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+
+        /* --- Estilo del Placeholder de Imagen --- */
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            color: #94a3b8;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 10px;
+            opacity: 0.5;
+        }
+
+        .image-placeholder span {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .tip-box {
+            background: #fdf2f8;
+            border-left: 4px solid #ec4899;
+            padding: 15px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- PORTADA -->
+        <header>
+            <div style="margin-bottom: 35px; display: flex; justify-content: center; position: relative; z-index: 10;">
+                <div
+                    style="background: white; width: 110px; height: 110px; border-radius: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 6L88 28V72L50 94L12 72V28L50 6Z" fill="#3B82F6" />
+                        <path d="M36 50L46 60L65 41" stroke="white" stroke-width="7" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <h1>Jornify</h1>
+            <p>Guía Maestra para el Control Horario</p>
+        </header>
+
+        <div class="section-intro">
+            <h2>¡Bienvenido a la nueva forma de gestionar tu tiempo!</h2>
+            <p>En esta guía aprenderás paso a paso cómo dominar Jornify, ya seas el dueño de la empresa o un
+                colaborador.</p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- SECCIÓN EMPRESARIO -->
+        <div class="role-badge badge-admin">Para el Empresario / Administrador</div>
+        <div class="card">
+            <h2>1. Configuración de tu Empresa</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Registro y Acceso al Panel</h3>
+                    <p>Accede a <span class="highlight">jornify.io</span> y entra con tus credenciales. Encontrarás el
+                        Dashboard principal con un resumen de actividad.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        <span>[IMAGEN: Panel de Control del Administrador]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Tu PIN de Empresa</h3>
+                    <p>No necesitas dar de alta a cada empleado manualmente. En tu perfil de empresa encontrarás un
+                        <span class="highlight">PIN único</span>.
+                    </p>
+                    <p>Comparte este PIN con tus empleados para que ellos puedan vincularse a tu organización al crear
+                        su cuenta.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3">
+                            </path>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        <span>[IMAGEN: Pantalla donde aparece el PIN de Empresa]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Descarga de Informes Legales</h3>
+                    <p>Cumple con la normativa en un clic. Selecciona el mes y el empleado, y genera el PDF oficial
+                        firmado.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>[IMAGEN: Botón de Descarga de Informe PDF]</span>
+                    </div>
+                    <div class="tip-box">
+                        <strong>Tip:</strong> Revisa el informe semanalmente para detectar olvidos en los fichajes antes
+                        de fin de mes.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- SECCIÓN EMPLEADO -->
+        <div class="role-badge badge-user">Para el Empleado / Colaborador</div>
+        <div class="card">
+            <h2>2. Tu Jornada Diaria</h2>
+
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Registro y Código PIN</h3>
+                    <p>Crea tu cuenta de empleado y, cuando el sistema lo solicite, introduce el <span
+                            class="highlight">PIN de Empresa</span> que te ha facilitado tu responsable.</p>
+                    <p>¡Listo! Ya estarás vinculado y podrás empezar a fichar cada día.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>[IMAGEN: App - Pantalla de registro con el campo para el PIN]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Fichar Entrada</h3>
+                    <p>Al llegar al trabajo, pulsa el botón <span class="highlight">"Iniciar Jornada"</span>. El
+                        contador empezará a correr en tiempo real.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span>[IMAGEN: App - Botón de Inicio de Jornada]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Pausas y Descansos</h3>
+                    <p>Si sales a comer o tienes un descanso, usa el botón de pausa. Jornify restará ese tiempo
+                        automáticamente del total.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                        <span>[IMAGEN: App - Estado de Pausa activo]</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Finalizar y Revisar</h3>
+                    <p>Al terminar, pulsa "Finalizar Jornada". Podrás ver el resumen de horas trabajadas en tu historial
+                        personal.</p>
+
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>[IMAGEN: Pantalla de Historial de Fichajes]</span>
+                    </div>
+                    <div class="tip-box">
+                        <strong>Recuerda:</strong> Puedes acceder desde tu móvil para fichar cómodamente si trabajas en
+                        remoto o fuera de la oficina.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Jornify - Software de Control Horario Simplificado</p>
+            <p>Hecho con ❤️ para que te olvides del papeleo.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
