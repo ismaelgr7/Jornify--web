@@ -14,9 +14,9 @@ const FAQ: React.FC = () => {
     <Section id="faq" className="bg-white py-24">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
-          Preguntas frecuentes
+          Preguntas frecuentes sobre el Registro de Jornada
         </h2>
-        
+
         <div className="space-y-4">
           {FAQS.map((faq, index) => (
             <div key={index} className="border border-slate-200 rounded-lg overflow-hidden">
@@ -31,7 +31,7 @@ const FAQ: React.FC = () => {
                   <ChevronDown className="text-slate-400 flex-shrink-0" />
                 )}
               </button>
-              
+
               {openIndex === index && (
                 <div className="px-6 pb-6 bg-white text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
                   {faq.answer}

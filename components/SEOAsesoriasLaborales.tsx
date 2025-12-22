@@ -118,7 +118,7 @@ const SEOAsesoriasLaborales: React.FC = () => {
       {/* Footer CTA */}
       <footer className="bg-blue-600 py-24">
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">Empiece a colaborar con FichApp hoy</h2>
+          <h2 className="text-3xl font-bold mb-6">Empiece a colaborar con Jornify hoy</h2>
           <p className="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
             Únase a nuestra red de asesorías colaboradoras y transforme el cumplimiento legal de sus clientes en una ventaja para su propio despacho.
           </p>

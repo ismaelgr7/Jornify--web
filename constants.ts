@@ -11,7 +11,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const HERO_COPY = {
-  h1: "Jornify",
+  h1: "Control Horario para Asesorías y PYMES en España",
   subheadline: "Registro de jornada laboral que cumple la ley, diseñado para la PYME española.",
   description: "La solución definitiva para empresas de 5 a 50 empleados. Sin instalaciones complejas, sin permanencia y recomendado por expertos laborales.",
   ctaPrimary: "Solicitar Demo",

@@ -6,7 +6,7 @@ const HowItWorks: React.FC = () => {
   return (
     <Section id="como-funciona" className="bg-white py-24 border-t border-slate-100">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">¿Cómo funciona?</h2>
+        <h2 className="text-3xl font-bold text-slate-900 mb-4">¿Cómo funciona el registro de jornada en Jornify?</h2>
         <p className="text-lg text-slate-600">
           Implementación inmediata en tres sencillos pasos.
         </p>

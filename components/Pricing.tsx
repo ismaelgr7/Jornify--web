@@ -12,7 +12,7 @@ const Pricing: React.FC<PricingProps> = ({ onContactClick }) => {
   return (
     <Section id="precios" className="bg-slate-50 py-24">
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">Precio transparente</h2>
+        <h2 className="text-3xl font-bold text-slate-900 mb-4">Precio de Control Horario Transparente</h2>
         <p className="text-lg text-slate-600">
           Sin tramos complejos, sin costes de alta y sin sorpresas en la factura.
         </p>

@@ -28,7 +28,7 @@ const Consultancies: React.FC<ConsultanciesProps> = ({ onContactClick }) => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Genera ingresos recurrentes sin aumentar tu carga de trabajo
+              Control Horario para Asesorías: Genera ingresos recurrentes
             </h2>
 
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">

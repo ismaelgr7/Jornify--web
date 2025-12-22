@@ -13,7 +13,7 @@ const Features: React.FC = () => {
   return (
     <Section id="ventajas" className="bg-white py-24">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">Lo que necesita tu empresa, ni más ni menos</h2>
+        <h2 className="text-3xl font-bold text-slate-900 mb-4">El Control de Jornada que necesita tu empresa</h2>
         <p className="text-lg text-slate-600">
           Hemos eliminado lo superfluo para centrarnos en lo obligatorio y útil.
         </p>
