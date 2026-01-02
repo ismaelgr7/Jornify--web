@@ -154,7 +154,7 @@ const SEOControlHorarioPymes: React.FC = () => {
             </Button>
           </div>
           <p className="mt-8 text-sm text-slate-400 font-medium">
-            30€ por empleado al año. IVA incluido. Sin sorpresas.
+            2,50€ por empleado al mes. IVA incluido. Sin sorpresas.
           </p>
         </div>
       </footer>

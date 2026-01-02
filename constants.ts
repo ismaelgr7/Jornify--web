@@ -1,6 +1,7 @@
 import { NavItem, Feature, FAQItem, PricingDetail } from './types';
 
 export const APP_NAME = "Jornify";
+export const APP_URL = "https://jornify.vercel.app";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Ventajas", href: "#ventajas" },
@@ -11,28 +12,28 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const HERO_COPY = {
-  h1: "Control Horario para Asesorías y PYMES en España",
-  subheadline: "Registro de jornada laboral que cumple la ley, diseñado para la PYME española.",
-  description: "La solución definitiva para empresas de 5 a 50 empleados. Sin instalaciones complejas, sin permanencia y recomendado por expertos laborales.",
-  ctaPrimary: "Solicitar Demo",
+  h1: "Control Horario para Hostelería y PYMES",
+  subheadline: "La solución de registro de jornada más sencilla para bares, restaurantes y pequeños negocios.",
+  description: "Cumple con la ley sin papeleo. Diseñado para equipos dinámicos que no tienen tiempo que perder con herramientas complejas.",
+  ctaPrimary: "Empezar a Fichar",
   ctaSecondary: "Ver Precios",
-  trust: "Cumple rigurosamente con el Real Decreto-ley 8/2019"
+  trust: "Cumple con el Registro de Jornada Obligatorio (RD 8/2019)"
 };
 
 export const FEATURES: Feature[] = [
   {
-    title: "Cumplimiento Legal Garantizado",
-    description: "Genera informes listos para la Inspección de Trabajo con un solo clic. Adaptado al Estatuto de los Trabajadores y normativa vigente en España.",
+    title: "Cumplimiento Legal 100%",
+    description: "Genera informes listos para la Inspección de Trabajo con un solo clic. Adaptable a turnos partidos y horarios complejos de hostelería.",
     iconName: "ShieldCheck"
   },
   {
-    title: "100% Web y Móvil",
-    description: "No requiere instalar servidores ni hardware costoso. Accesible desde cualquier navegador o smartphone para empleados en oficina o teletrabajo.",
+    title: "Fichaje desde el Móvil",
+    description: "Sin máquinas de fichar costosas. Tus empleados fichan desde su propio smartphone al llegar al local, con geolocalización opcional.",
     iconName: "Smartphone"
   },
   {
-    title: "Gestión en Tiempo Real",
-    description: "Visualiza al instante quién está trabajando y cuántas horas lleva cada empleado. Control total desde el panel de administración.",
+    title: "Control en Tiempo Real",
+    description: "Visualiza al instante quién ha entrado a trabajar y cuántas horas lleva de jornada. Ideal para gestionar cambios de turno sobre la marcha.",
     iconName: "Monitor"
   }
 ];
@@ -57,22 +58,22 @@ export const HOW_IT_WORKS_STEPS = [
 
 export const CONSULTANCY_COPY = {
   title: "Para Asesorías Laborales",
-  headline: "Facilita la vida a tus clientes y evita sanciones.",
-  description: "Jornify es la herramienta que recomendamos a los gestores laborales. Ofrece a tus clientes una solución robusta, evita errores en los registros manuales y gestiona múltiples empresas desde un panel de partner.",
-  cta: "Contactar para Partner Program"
+  headline: "Tus clientes digitalizados, tus gestiones simplificadas.",
+  description: "Deja de perseguir hojas de firmas borrosas o incompletas de tus clientes de hostelería. Jornify genera informes PDF digitales perfectos, listos para procesar la nómina cada mes.",
+  cta: "Solicitar Código de Asesoría"
 };
 
 export const PRICING_COPY: PricingDetail = {
-  price: "30€",
+  price: "2,50€",
   unit: "empleado",
-  period: "/ año (IVA incluido)",
+  period: "/ mes (IVA incluido)",
   features: [
-    "Registro de entradas y salidas",
-    "Generación de informes PDF por empleado",
-    "Control de horas en tiempo real",
-    "Soporte técnico por email",
-    "Sin límite de registros",
-    "Actualizaciones legales incluidas"
+    "Registro de jornada legal (RD 8/2019)",
+    "Informes PDF listos para inspección",
+    "Recordatorios automáticos (Aviso Salida)",
+    "Firma digital inalterable",
+    "Gestión de pausas y descansos",
+    "Soporte prioritario incluido"
   ]
 };
 
@@ -91,7 +92,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "¿Hay costes ocultos o de alta?",
-    answer: "Ninguno. El precio es único: 30€ por empleado al año, IVA incluido. Incluye todas las funcionalidades, almacenamiento de datos durante 4 años y soporte."
+    answer: "Ninguno. El precio es transparente: solo 2,50€ por empleado al mes, IVA incluido. Una inversión mínima para garantizar la tranquilidad legal de tu empresa y evitar sanciones que pueden llegar hasta los 6.000€."
   }
 ];
 

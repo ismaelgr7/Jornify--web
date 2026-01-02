@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NAV_ITEMS } from '../constants';
+import { NAV_ITEMS, APP_URL } from '../constants';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import Logo from './Logo';
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
                 {item.label}
               </a>
             ))}
-            <Button variant="primary" className="py-2.5 px-5 text-sm" onClick={onContactClick}>Acceder</Button>
+            <Button variant="primary" className="py-2.5 px-5 text-sm" onClick={() => window.open(APP_URL, '_blank')}>Acceder</Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
               </a>
             ))}
             <div className="pt-4 px-3">
-              <Button fullWidth onClick={() => setIsOpen(false)}>Acceder</Button>
+              <Button fullWidth onClick={() => window.open(APP_URL, '_blank')}>Acceder</Button>
             </div>
           </div>
         </div>

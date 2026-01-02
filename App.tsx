@@ -63,7 +63,7 @@ function App() {
         {isSEOPageControl && <SEOControlHorario />}
         {isSEOPageRegistro && <SEORegistroJornada />}
         {isSEOPagePymes && <SEOControlHorarioPymes />}
-        {isSEOPageAsesorias && <SEOAsesoriasLaborales />}
+        {isSEOPageAsesorias && <SEOAsesoriasLaborales onContactClick={() => setIsContactModalOpen(true)} />}
         {isSEOPageSoftware && <SEOSoftwareControlHorario />}
         {isLegalNotice && <LegalNotice />}
         {isPrivacyPolicy && <PrivacyPolicy />}

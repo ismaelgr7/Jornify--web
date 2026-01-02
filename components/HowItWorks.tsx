@@ -27,7 +27,24 @@ const HowItWorks: React.FC = () => {
             </p>
           </div>
         ))}
-      </div>
+        <div className="mt-20 bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">Instálalo en tu móvil como una App</h3>
+            <p className="text-slate-600 mb-8">
+              Jornify es una PWA (Progressive Web App). No necesitas descargarla de la Play Store. Ábrela en tu móvil y sigue estos pasos:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">iOS</div>
+                <p className="text-sm text-slate-600">Pulsa el botón de <strong>Compartir</strong> (cuadrado con flecha) y selecciona <strong>"Añadir a pantalla de inicio"</strong>.</p>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">And</div>
+                <p className="text-sm text-slate-600">Pulsa los <strong>tres puntos</strong> del navegador y selecciona <strong>"Instalar aplicación"</strong> o "Añadir a pantalla de inicio".</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </Section>
   );
 };

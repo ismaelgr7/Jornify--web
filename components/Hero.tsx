@@ -1,5 +1,5 @@
 import React from 'react';
-import { HERO_COPY } from '../constants';
+import { HERO_COPY, APP_URL } from '../constants';
 import Button from './Button';
 import Section from './Section';
 import { CheckCircle2 } from 'lucide-react';
@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="primary" className="text-base px-8 py-4" onClick={onContactClick}>{HERO_COPY.ctaPrimary}</Button>
+            <Button variant="primary" className="text-base px-8 py-4" onClick={() => window.open(APP_URL, '_blank')}>{HERO_COPY.ctaPrimary}</Button>
             <Button variant="outline" className="w-full sm:w-auto text-lg px-8 py-4" onClick={() => window.location.hash = '#precios'}>
               {HERO_COPY.ctaSecondary}
             </Button>
