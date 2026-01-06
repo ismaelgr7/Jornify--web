@@ -5,6 +5,7 @@ export const APP_URL = "https://jornify.vercel.app";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Ventajas", href: "#ventajas" },
+  { label: "Instalación", href: "#instalar-app" },
   { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Asesorías", href: "#asesorias" },
   { label: "Precios", href: "#precios" },

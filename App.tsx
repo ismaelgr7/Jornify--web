@@ -17,6 +17,7 @@ import LegalNotice from './components/LegalNotice';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import CookiesPolicy from './components/CookiesPolicy';
 import ContactModal from './components/ContactModal';
+import InstallPWA from './components/InstallPWA';
 
 function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash);
@@ -72,6 +73,7 @@ function App() {
           <>
             <Hero onContactClick={() => setIsContactModalOpen(true)} />
             <LegalStrip />
+            <InstallPWA />
             <Features />
             <HowItWorks />
             <Consultancies onContactClick={() => setIsContactModalOpen(true)} />
